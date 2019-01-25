@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 742691387}
   m_Layer: 0
   m_Name: download
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -504,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2340ba3e6951c9a418297959a8709839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: Start1
   player: {fileID: 1875839048}
   isInside: 0
   fade: {fileID: 299791124}
@@ -754,6 +755,7 @@ MonoBehaviour:
   checkRadius: 0.5
   groundCheck: {fileID: 1043743035}
   canMove: 1
+  fade: {fileID: 0}
 --- !u!61 &1875839049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -770,7 +772,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 1}
+    oldSize: {x: 0.64, y: 1.28}
     newSize: {x: 0.16, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -834,7 +836,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a483fdd558751f4d8f5c413c88c87e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31f8e21e0e8df2a439b9a65e8f191caf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -62,8 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Door.cs" />
+    <Compile Include="Assets\Drops.cs" />
     <Compile Include="Assets\Fader.cs" />
     <Compile Include="Assets\Item.cs" />
+    <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\Obtainable.cs" />
     <Compile Include="Assets\PlayerController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
