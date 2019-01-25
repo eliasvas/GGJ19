@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public bool CanJump = true;
+    public bool interacts = false;
     public float speed;
     public float jumpForce;
     Rigidbody2D rb;
@@ -41,11 +43,16 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded && CanJump)
+        {
             //Debug.Log("Jump");
-            //rb.velocity = Vector2.up * jumpForce;
+            //rb.velocity += Vector2.up * jumpForce;
             rb.AddForce(Vector2.up * jumpForce);
+            interacts = false;
         }
+        interacts = false;
+        if (Input.GetKeyDown(KeyCode.E))
+            interacts = true;
 	}
 
     void Flip() {
