@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
     Animator anim;
     public bool canMove = true;
     public Fader fade;
+    public BoxCollider2D melee;
+    bool canAttack = true;
 
     // Use this for initialization
     void Start() {
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         if (canMove) {
             moveInput = Input.GetAxis("Horizontal");
-            rb.velocity = new Vector2(moveInput * speed, rb.position.y);
+            rb.velocity = new Vector2(moveInput * speed , rb.velocity.y);
             if (facingRight && moveInput < 0)
                 Flip();
             else if (facingRight == false && moveInput > 0)
@@ -41,18 +43,19 @@ public class PlayerController : MonoBehaviour {
         {
             rb.velocity = new Vector2();
         }
-        
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded && CanJump)
+        {
+            //Debug.Log("Jump");
+            rb.velocity = new Vector2(0, jumpForce);
+            //rb.AddForce(Vector2.up * jumpForce );
+            interacts = false;
+        }
     }
 
     // Update is called once per frame
     void Update() {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded && CanJump)
-        {
-            //Debug.Log("Jump");
-            //rb.velocity += Vector2.up * jumpForce;
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
-            interacts = false;
-        }
+        if (Input.GetKey(KeyCode.Space) && canAttack)
+            StartCoroutine(Fire());
         interacts = false;
         if (Input.GetKeyDown(KeyCode.E))
             interacts = true;
@@ -72,8 +75,21 @@ public class PlayerController : MonoBehaviour {
     IEnumerator Die() {
         canMove = false;
         //anim.SetTrigger("Die");
+        yield return new WaitForSeconds(1f);
         fade.SceneFinished = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void OpenDoor() {
+        canMove = false;
+        //anim.SetTrigger("OpenDoor");
+    }
+    IEnumerator Fire() {
+        //anim.SetTrigger("fire");
+        canAttack = false;
+        melee.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        melee.enabled = false;
+        canAttack = true;
     }
 }

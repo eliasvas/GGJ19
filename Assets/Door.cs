@@ -9,17 +9,21 @@ public class Door : MonoBehaviour {
     public bool isOnDoor;
     public string scene;
     public bool CanOpen = false;
+    PlayerController player;
+    Animator playerAnimator;
 
 	// Use this for initialization
 	void Start () {
-        //anim = GetComponent<Animator>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        anim = GetComponent<Animator>();
         //an CanOpen == false to allakse to sprite sto kanoniko
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (isOnDoor && Input.GetKeyDown(KeyCode.UpArrow) && CanOpen) {
-            //anim.SetTrigger("Enter");
+        if (isOnDoor && Input.GetKeyDown(KeyCode.E) && CanOpen) {
+            player.OpenDoor();
+            anim.SetTrigger("open");
             StartCoroutine(LoadScene(scene));
         }
 	}

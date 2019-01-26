@@ -61,8 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\cameraMovementImproved.cs" />
     <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\Drops.cs" />
+    <Compile Include="Assets\enemy.cs" />
     <Compile Include="Assets\Fader.cs" />
     <Compile Include="Assets\Item.cs" />
     <Compile Include="Assets\Menu.cs" />
