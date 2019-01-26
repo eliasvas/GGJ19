@@ -22,9 +22,16 @@ public class PlayerController : MonoBehaviour {
     public BoxCollider2D melee;
     bool canAttack = true;
     float movement;
+    public AudioSource audio;
 
     // Use this for initialization
     void Start() {
+        AudioClip sound = (AudioClip)Resources.Load("ironhit", typeof(AudioClip));
+        audio = GetComponent<AudioSource>();
+        if (sound != null)
+            audio.clip = sound;
+        else
+            Debug.Log("no");
         fade = GameObject.Find("Fade").GetComponent<Fader>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -87,6 +94,7 @@ public class PlayerController : MonoBehaviour {
         //anim.SetTrigger("OpenDoor");
     }
     IEnumerator Fire() {
+        audio.Play();
         anim.SetTrigger("hit");
         canAttack = false;
         melee.enabled = true;
