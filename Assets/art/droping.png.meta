@@ -1,12 +1,15 @@
 fileFormatVersion: 2
-guid: 4535ad7a49600644884fa5da9ebdeb24
+guid: 257b00b069d56fc45b3e07e482a6e9b8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dooranim_0
-    21300002: dooranim_1
-    21300004: dooranim_2
-    21300006: dooranim_3
-    21300008: dooranim_4
+    21300000: droping_0
+    21300002: droping_1
+    21300004: droping_2
+    21300006: droping_3
+    21300008: droping_4
+    21300010: droping_5
+    21300012: droping_6
+    21300014: droping_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -36,7 +39,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -50,7 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +71,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -79,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -90,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,13 +114,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dooranim_0
+      name: droping_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,19 +128,79 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5575f6cb17532474aa9450340d6ff9fd
+      spriteID: 192969d421b742947b2af1a0172810de
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dooranim_1
+      name: droping_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dde6efa8d0c0264680c1ca11e926500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droping_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cffac1bc4cb3e4ebcb1aa3f4f6b780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droping_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00aeb36b7dfec124da9281970b287fdc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droping_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 64
-        height: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,19 +208,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0e02515867c45b4f93c2f9e0798e744
+      spriteID: 7c629ac8a38cf644e8ff43e10733f6a8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dooranim_2
+      name: droping_5
       rect:
         serializedVersion: 2
-        x: 128
+        x: 80
         y: 0
-        width: 64
-        height: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,19 +228,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a016a4356b2830d42bb0c48d8e07218e
+      spriteID: 56c4203136a1d2a4e9e7f7228f756b56
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dooranim_3
+      name: droping_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 0
-        width: 64
-        height: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,19 +248,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc0045d16d9351d49bebe36b0c1dcb04
+      spriteID: c77bc0e232b8be646b61cf899befd2aa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dooranim_4
+      name: droping_7
       rect:
         serializedVersion: 2
-        x: 256
+        x: 112
         y: 0
-        width: 64
-        height: 160
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,7 +268,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3824e0766cc630489511c5de9a9c78b
+      spriteID: 69a96d78e8070ae44a0e92568e7ceda5
       vertices: []
       indices: 
       edges: []
@@ -213,7 +276,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cfee0f070aca13c428f9b5a9c066bdda
+    spriteID: 3d5fa948558e0be49a9e357285ffb5f1
     vertices: []
     indices: 
     edges: []

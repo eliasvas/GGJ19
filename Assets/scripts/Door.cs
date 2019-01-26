@@ -11,9 +11,11 @@ public class Door : MonoBehaviour {
     public bool CanOpen = false;
     PlayerController player;
     Animator playerAnimator;
+    SpriteRenderer sr;
 
 	// Use this for initialization
 	void Start () {
+        sr = GetComponent<SpriteRenderer>();
         player = GameObject.Find("Player").GetComponent<PlayerController>();
         anim = GetComponent<Animator>();
         //an CanOpen == false to allakse to sprite sto kanoniko
@@ -21,6 +23,10 @@ public class Door : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!CanOpen)
+            sr.color = new Color(0f, 255f, 255f, 1f); // Set to opaque black
+        else
+            sr.color = new Color(255f, 255f, 255f, 1f);
         if (isOnDoor && Input.GetKeyDown(KeyCode.E) && CanOpen) {
             player.OpenDoor();
             anim.SetTrigger("open");
