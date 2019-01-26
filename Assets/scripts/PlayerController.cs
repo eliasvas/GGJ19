@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
+    bool isAlive = true;
     public bool CanJump = true;
     public bool interacts = false;
     public float speed;
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public bool isGrounded;
     public LayerMask whatIsGround;
     public float checkRadius;
+    bool canPlayMusic = true;
     public Transform groundCheck;
     float moveInput;
     bool facingRight = true;
@@ -76,7 +78,8 @@ public class PlayerController : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy") {
+        if (collision.tag == "Enemy" && isAlive) {
+            isAlive = false;
             Debug.Log("dead");
             StartCoroutine(Die());
         }
@@ -84,7 +87,16 @@ public class PlayerController : MonoBehaviour {
     IEnumerator Die() {
         canMove = false;
         //anim.SetTrigger("die");
-        yield return new WaitForSeconds(1f);
+        AudioClip sound = (AudioClip)Resources.Load("diefix", typeof(AudioClip));
+        audio = GetComponent<AudioSource>();
+        if (sound != null)
+            audio.clip = sound;
+        else
+            Debug.Log("no");
+        audio.volume = 1;
+        audio.Play();
+        canPlayMusic = false;
+        yield return new WaitForSeconds(2f);
         fade.SceneFinished = true;
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -94,7 +106,8 @@ public class PlayerController : MonoBehaviour {
         //anim.SetTrigger("OpenDoor");
     }
     IEnumerator Fire() {
-        audio.Play();
+        if (canPlayMusic)
+            audio.Play();
         anim.SetTrigger("hit");
         canAttack = false;
         melee.enabled = true;

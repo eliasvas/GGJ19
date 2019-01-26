@@ -9,7 +9,7 @@ public class Steam : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        AudioClip sound = (AudioClip)Resources.Load("geyzer2", typeof(AudioClip));
+        AudioClip sound = (AudioClip)Resources.Load("geyzer3", typeof(AudioClip));
         audio = GetComponent<AudioSource>();
         if (sound != null)
             audio.clip = sound;
