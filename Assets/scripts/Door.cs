@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour {
 
+    AudioSource audio;
     Animator anim;
     public bool isOnDoor;
     public string scene;
@@ -15,6 +16,12 @@ public class Door : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        AudioClip sound = (AudioClip)Resources.Load("doorsound", typeof(AudioClip));
+        audio = GetComponent<AudioSource>();
+        if (sound != null)
+            audio.clip = sound;
+        else
+            Debug.Log("no");
         sr = GetComponent<SpriteRenderer>();
         player = GameObject.Find("Player").GetComponent<PlayerController>();
         anim = GetComponent<Animator>();
@@ -47,6 +54,7 @@ public class Door : MonoBehaviour {
         }
     }
     IEnumerator LoadScene(string scene) {
+        audio.Play();
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(scene);
     }

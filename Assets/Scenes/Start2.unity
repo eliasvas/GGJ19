@@ -162,6 +162,12 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 945428042}
+    - target: {fileID: 212754775381018292, guid: 079ccc5e8664a364bb4157d98eee5a58,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a07bcdd6c739b3440b6c20359644036f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
   m_IsPrefabAsset: 0
@@ -216,7 +222,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: da2655cb513a56f4db9dc1b15d6464dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d7558587055ce740b2f528ea443c477, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -286,7 +292,7 @@ Prefab:
     - target: {fileID: 114861751387140102, guid: c404ac237143ec54a86c5d0614a3d2c7,
         type: 2}
       propertyPath: scene
-      value: stage1
+      value: stage2
       objectReference: {fileID: 0}
     - target: {fileID: 212513519823526808, guid: c404ac237143ec54a86c5d0614a3d2c7,
         type: 2}
@@ -466,7 +472,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4870747231682528, guid: 55c177391b38c734bbbe408177cca393, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 23
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 4870747231682528, guid: 55c177391b38c734bbbe408177cca393, type: 2}
       propertyPath: m_RootOrder
@@ -789,7 +795,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4844513584318350, guid: c404ac237143ec54a86c5d0614a3d2c7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.9
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4844513584318350, guid: c404ac237143ec54a86c5d0614a3d2c7, type: 2}
       propertyPath: m_LocalPosition.y

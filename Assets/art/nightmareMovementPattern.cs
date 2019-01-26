@@ -41,12 +41,11 @@ public class nightmareMovementPattern : MonoBehaviour {
 
     void Update()
     {
-        if (gameObject != null)
+        if (gameObject != null && !(player.position.x - transform.position.x > 100 || player.position.y - transform.position.y > 100))
         {
             pos += (-1) * transform.right * Time.deltaTime * MoveSpeed;
             transform.position = pos + axis * Mathf.Cos(Time.time * frequency) * magnitude + new Vector3(0, 0, randomSpawnDegrees);
 
-            //TESTETESTTETSTTESTETSTETSTEST
             //What is the difference in position?
             Vector3 diff = (player.position - transform.position);
 
@@ -72,12 +71,12 @@ public class nightmareMovementPattern : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Respawn") {
-            sr.enabled = false;
             BoxCollider2D c = GetComponent<BoxCollider2D>();
             c.enabled = false;
+            StartCoroutine(Fade());
             if (gameObject != null) {
                 isDestructable = false;
-                StartCoroutine(animateDeath());
+                //StartCoroutine(animateDeath());
                 //Destroy(gameObject);
             }
             StartCoroutine(WaitAndGiveColliderBack(c));
@@ -111,5 +110,14 @@ public class nightmareMovementPattern : MonoBehaviour {
     }
     void DiagnoseWithDead() {
         StartCoroutine(animateDeath());
+    }
+    IEnumerator Fade() {
+        float op = 1f;
+        while (sr.color.a > 0) {
+            sr.color = new Color(255f, 255f, 255f, op);
+            yield return new WaitForSeconds(0.15f);
+            op -= 0.2f;
+        }
+        Destroy(gameObject);
     }
 }
