@@ -21,12 +21,13 @@ public class PlayerController : MonoBehaviour {
     public Fader fade;
     public BoxCollider2D melee;
     bool canAttack = true;
+    float movement;
 
     // Use this for initialization
     void Start() {
         fade = GameObject.Find("Fade").GetComponent<Fader>();
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         if (canMove) {
             moveInput = Input.GetAxis("Horizontal");
+            anim.SetFloat("speed", Mathf.Abs(moveInput));
             rb.velocity = new Vector2(moveInput * speed , rb.velocity.y);
             if (facingRight && moveInput < 0)
                 Flip();
@@ -74,7 +76,7 @@ public class PlayerController : MonoBehaviour {
     }
     IEnumerator Die() {
         canMove = false;
-        //anim.SetTrigger("Die");
+        //anim.SetTrigger("die");
         yield return new WaitForSeconds(1f);
         fade.SceneFinished = true;
         yield return new WaitForSeconds(1f);
