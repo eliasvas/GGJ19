@@ -75,8 +75,6 @@ public class nightmareMovementPattern : MonoBehaviour {
             sr.enabled = false;
             BoxCollider2D c = GetComponent<BoxCollider2D>();
             c.enabled = false;
-            //playanimation - wait - destroy (COROUTINE)
-            //Debug.Log("HAKAI");
             if (gameObject != null) {
                 isDestructable = false;
                 StartCoroutine(animateDeath());

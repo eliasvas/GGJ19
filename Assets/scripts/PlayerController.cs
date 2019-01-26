@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour {
         //anim.SetTrigger("OpenDoor");
     }
     IEnumerator Fire() {
-        //anim.SetTrigger("fire");
+        anim.SetTrigger("hit");
         canAttack = false;
         melee.enabled = true;
         yield return new WaitForSeconds(0.2f);
