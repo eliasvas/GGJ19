@@ -113,6 +113,64 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &82083781
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4403599190899508, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 158.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403599190899508, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403599190899508, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403599190899508, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403599190899508, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403599190899508, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403599190899508, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403599190899508, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114917274824852444, guid: 079ccc5e8664a364bb4157d98eee5a58,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 117692720}
+    - target: {fileID: 114917274824852444, guid: 079ccc5e8664a364bb4157d98eee5a58,
+        type: 2}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 945428042}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &117692720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114970802595740834, guid: 55c177391b38c734bbbe408177cca393,
+    type: 2}
+  m_PrefabInternal: {fileID: 899195027}
+  m_Script: {fileID: 11500000, guid: aece82cd1c37ecb4c8e42d84f4a56a63, type: 3}
 --- !u!1 &403840001
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +288,11 @@ Prefab:
     - target: {fileID: 1382245531607656, guid: c404ac237143ec54a86c5d0614a3d2c7, type: 2}
       propertyPath: m_Name
       value: door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114861751387140102, guid: c404ac237143ec54a86c5d0614a3d2c7,
+        type: 2}
+      propertyPath: scene
+      value: stage1
       objectReference: {fileID: 0}
     - target: {fileID: 212513519823526808, guid: c404ac237143ec54a86c5d0614a3d2c7,
         type: 2}
@@ -377,11 +440,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4433489768052090, guid: 55c177391b38c734bbbe408177cca393, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -37.4
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 4433489768052090, guid: 55c177391b38c734bbbe408177cca393, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.7
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4433489768052090, guid: 55c177391b38c734bbbe408177cca393, type: 2}
       propertyPath: m_LocalPosition.z
@@ -410,6 +473,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c177391b38c734bbbe408177cca393, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &945428042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114861751387140102, guid: c404ac237143ec54a86c5d0614a3d2c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 504015609}
+  m_Script: {fileID: 11500000, guid: cfc2f0335a5242f42a86bd298f7612fb, type: 3}
 --- !u!1001 &1132593907
 Prefab:
   m_ObjectHideFlags: 0
@@ -757,7 +826,7 @@ Prefab:
     - target: {fileID: 114861751387140102, guid: c404ac237143ec54a86c5d0614a3d2c7,
         type: 2}
       propertyPath: CanOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212513519823526808, guid: c404ac237143ec54a86c5d0614a3d2c7,
         type: 2}

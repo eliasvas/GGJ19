@@ -5,11 +5,14 @@ using UnityEngine;
 public class Drops : MonoBehaviour {
 
     Rigidbody2D rb;
+    BoxCollider2D box;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(Fall());
+        box = GetComponent<BoxCollider2D>();
+        box.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -18,6 +21,7 @@ public class Drops : MonoBehaviour {
 	}
     IEnumerator Fall() {
         yield return new WaitForSeconds(2f);
+        box.enabled = true;
         rb.gravityScale = 70;
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);

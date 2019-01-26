@@ -9,18 +9,22 @@ public class Item : MonoBehaviour {
     public PlayerController player;
     public bool isInside;
     Animator anim;
+    public Door door;
+    public SpriteRenderer arrow;
 
 	// Use this for initialization
 	void Start () {
         sr = GetComponent<SpriteRenderer>();
-        sr.enabled = true;
+        sr.enabled = false;
         //anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update () {
         if (isInside && player.interacts) {
-            sr.enabled = false; ;
+            sr.enabled = true;
+            arrow.enabled = false;
+            door.CanOpen = true;
         }
 	}
 
