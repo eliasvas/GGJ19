@@ -14,9 +14,16 @@ public class Item : MonoBehaviour {
     public SpriteRenderer arrow;
     public Image painting;
     public ChangeScenes sc;
+    AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
+        AudioClip sound = (AudioClip)Resources.Load("pickup", typeof(AudioClip));
+        audio = GetComponent<AudioSource>();
+        if (sound != null)
+            audio.clip = sound;
+        else
+            Debug.Log("no");
         sr = GetComponent<SpriteRenderer>();
         sr.enabled = false;
         painting = GameObject.Find("painting").GetComponent<Image>();
@@ -31,6 +38,7 @@ public class Item : MonoBehaviour {
             sr.enabled = true;
             arrow.enabled = false;
             door.CanOpen = true;
+            audio.Play();
         }
 	}
 

@@ -64,8 +64,10 @@
     <Compile Include="Assets\art\nightmareMovementPattern.cs" />
     <Compile Include="Assets\art\SkullMovement.cs" />
     <Compile Include="Assets\ChangeScenes.cs" />
+    <Compile Include="Assets\HobGoblin.cs" />
     <Compile Include="Assets\meteorSpawner.cs" />
     <Compile Include="Assets\MusicPlayer.cs" />
+    <Compile Include="Assets\ScrapMovement.cs" />
     <Compile Include="Assets\scripts\cameraMovementImproved.cs" />
     <Compile Include="Assets\scripts\Door.cs" />
     <Compile Include="Assets\scripts\Drops.cs" />

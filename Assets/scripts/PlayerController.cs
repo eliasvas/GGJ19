@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
+    public bool invulnerable;
     bool isAlive = true;
     public bool CanJump = true;
     public bool interacts = false;
@@ -72,6 +73,8 @@ public class PlayerController : MonoBehaviour {
         interacts = false;
         if (Input.GetKeyDown(KeyCode.E))
             interacts = true;
+        if (Input.GetKeyDown(KeyCode.Tab))
+            invulnerable = !invulnerable;
 	}
 
     void Flip() {
@@ -80,7 +83,7 @@ public class PlayerController : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && isAlive) {
+        if (collision.tag == "Enemy" && isAlive && !invulnerable) {
             isAlive = false;
             Debug.Log("dead");
             StartCoroutine(Die());

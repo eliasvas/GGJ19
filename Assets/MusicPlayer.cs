@@ -6,6 +6,7 @@ public class MusicPlayer : MonoBehaviour {
 
     public string Song;
     private AudioSource audio;
+    public Obtainable ob;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,10 @@ public class MusicPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (ob != null) {
+            if (ob.playingMusic == true) {
+                audio.Stop();
+            }
+        }
 	}
 }
