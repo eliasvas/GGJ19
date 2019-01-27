@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\art\nightmareMovementPattern.cs" />
     <Compile Include="Assets\art\SkullMovement.cs" />
+    <Compile Include="Assets\ChangeScenes.cs" />
     <Compile Include="Assets\meteorSpawner.cs" />
     <Compile Include="Assets\MusicPlayer.cs" />
     <Compile Include="Assets\scripts\cameraMovementImproved.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\scripts\shake.cs" />
     <Compile Include="Assets\Spawner.cs" />
     <Compile Include="Assets\Steam.cs" />
+    <Compile Include="Assets\waitAndEnd.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Nivas/Documents/ggj18-game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

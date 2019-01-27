@@ -14,6 +14,7 @@ public class Obtainable : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         sr = GetComponent<SpriteRenderer>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
         //anim = GetComponent<Animator>();
 	}
 

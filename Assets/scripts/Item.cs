@@ -13,12 +13,14 @@ public class Item : MonoBehaviour {
     public Door door;
     public SpriteRenderer arrow;
     public Image painting;
+    public ChangeScenes sc;
 
 	// Use this for initialization
 	void Start () {
         sr = GetComponent<SpriteRenderer>();
         sr.enabled = false;
         painting = GameObject.Find("painting").GetComponent<Image>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
         //anim = GetComponent<Animator>();
     }
 
@@ -66,5 +68,7 @@ public class Item : MonoBehaviour {
             opaq -= 0.05f;
         }
         player.canMove = true;
+        if (sc != null)
+            sc.finished = true;
     }
 }

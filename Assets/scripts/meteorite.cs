@@ -10,12 +10,14 @@ public class meteorite : MonoBehaviour {
     bool moving = true;
     float yPos;
     CircleCollider2D circle;
+    Animator anim;
 
     private void Start()
     {
         circle = GetComponent<CircleCollider2D>();
         xPos = Random.Range(-2.5f, -3.5f);
         yPos = Random.Range(-2.5f, -3f);
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -37,7 +39,7 @@ public class meteorite : MonoBehaviour {
                 StartCoroutine(Explode());
             }
         }
-        if (!collision.name.StartsWith("steam")) {
+        if (collision.name == "Player" || collision.tag == "ground") {
             StartCoroutine(StopMove());
             StartCoroutine(Explode());
         }
@@ -45,7 +47,7 @@ public class meteorite : MonoBehaviour {
     }
     IEnumerator Explode() {
         circle.enabled = false;
-        //anim.SetTrigger("explode");
+        anim.SetTrigger("Explode");
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }

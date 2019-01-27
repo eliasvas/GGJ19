@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
     bool canAttack = true;
     float movement;
     public AudioSource audio;
+    public SpriteRenderer attack;
 
     // Use this for initialization
     void Start() {
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour {
         fade = GameObject.Find("Fade").GetComponent<Fader>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        attack = GameObject.Find("meleeRange").GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -85,8 +87,9 @@ public class PlayerController : MonoBehaviour {
         }
     }
     IEnumerator Die() {
+        rb.gravityScale = 300;
         canMove = false;
-        //anim.SetTrigger("die");
+        anim.SetTrigger("die");
         AudioClip sound = (AudioClip)Resources.Load("diefix", typeof(AudioClip));
         audio = GetComponent<AudioSource>();
         if (sound != null)
@@ -109,10 +112,12 @@ public class PlayerController : MonoBehaviour {
         if (canPlayMusic)
             audio.Play();
         anim.SetTrigger("hit");
+        attack.enabled = true;
         canAttack = false;
         melee.enabled = true;
         yield return new WaitForSeconds(0.2f);
         melee.enabled = false;
         canAttack = true;
+        attack.enabled = false;
     }
 }
