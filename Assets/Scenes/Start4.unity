@@ -173,6 +173,11 @@ Prefab:
       propertyPath: sc
       value: 
       objectReference: {fileID: 528583109}
+    - target: {fileID: 212754775381018292, guid: 079ccc5e8664a364bb4157d98eee5a58,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079ccc5e8664a364bb4157d98eee5a58, type: 2}
   m_IsPrefabAsset: 0
@@ -226,8 +231,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d7558587055ce740b2f528ea443c477, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 8de7513587ad25947a9c641bc18214bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -249,7 +254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &490717788
 GameObject:
@@ -301,7 +306,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a07bcdd6c739b3440b6c20359644036f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -324,7 +329,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &504015609
 Prefab:
@@ -421,7 +426,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &730343016
 Prefab:
@@ -618,6 +623,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c177391b38c734bbbe408177cca393, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &1123658901
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4878122577091782, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -38.211395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878122577091782, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 32.025284
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878122577091782, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878122577091782, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878122577091782, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878122577091782, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878122577091782, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878122577091782, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce10c6e0e151a0740b0e47833fd57686, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1132593907
 Prefab:
   m_ObjectHideFlags: 0
@@ -787,7 +834,7 @@ Prefab:
     - target: {fileID: 224183486888184446, guid: 62873cb8eefc4e943821f89cd33e431b,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224326603811014470, guid: 62873cb8eefc4e943821f89cd33e431b,
         type: 2}
@@ -989,7 +1036,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f4d785fd57b1bc047a0cbf0a353d7017, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1012,7 +1059,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1869135692
 Prefab:
