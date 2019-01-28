@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aece82cd1c37ecb4c8e42d84f4a56a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invulnerable: 0
   CanJump: 1
   interacts: 0
   speed: 150
@@ -347,7 +348,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  checkRadius: 0.5
+  checkRadius: 3.5
   groundCheck: {fileID: 4920931348326468}
   canMove: 1
   fade: {fileID: 0}
